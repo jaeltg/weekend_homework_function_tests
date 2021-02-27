@@ -61,6 +61,7 @@ def remove_customer_cash(customer, cash):
 def get_customer_pet_count(customer):
     return len(customer["pets"])
 
+# Adding a new pet or adding a pet from the stock to a customer?
 def add_pet_to_customer(customer, new_pet):
     new_pet = {
         "name": input("pets name: "), 
@@ -68,7 +69,7 @@ def add_pet_to_customer(customer, new_pet):
         "breed": input("pet breed: "), 
         "price": input("pet price: ")
         }
-        
+
     customer["pets"].append(new_pet)    
 
 

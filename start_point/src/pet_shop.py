@@ -43,12 +43,12 @@ def remove_pet_by_name(pet_shop, name):
             pet_shop["pets"].remove(pet)
 
 def add_pet_to_stock(pet_shop, new_pet):
-    new_pet = {
-        "name": input("pets name: "), 
-        "pet_type": input("pet type: "), 
-        "breed": input("pet breed: "), 
-        "price": input("pet price: ")
-        }
+    # new_pet = {
+    #     "name": input("pets name: "), 
+    #     "pet_type": input("pet type: "), 
+    #     "breed": input("pet breed: "), 
+    #     "price": input("pet price: ")
+    #     }
     
     pet_shop["pets"].append(new_pet)
   
@@ -63,14 +63,18 @@ def get_customer_pet_count(customer):
 
 # Adding a new pet or adding a pet from the stock to a customer?
 def add_pet_to_customer(customer, new_pet):
-    new_pet = {
-        "name": input("pets name: "), 
-        "pet_type": input("pet type: "), 
-        "breed": input("pet breed: "), 
-        "price": input("pet price: ")
-        }
+    # new_pet = {
+    #     "name": input("pets name: "), 
+    #     "pet_type": input("pet type: "), 
+    #     "breed": input("pet breed: "), 
+    #     "price": input("pet price: ")
+    #     }
 
     customer["pets"].append(new_pet)    
 
+def customer_can_afford_pet(customer, new_pet):
 
-            
+    if (customer["cash"]) >= new_pet["price"]:
+        return True
+    else:
+        return False    
